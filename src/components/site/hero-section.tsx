@@ -60,7 +60,7 @@ export function HeroSection() {
           <Badge className="border-white/20 bg-white/10 text-white" tone="neutral">
             React/Next.js fixes + cleanup
           </Badge>
-          <h1 className="mt-6 text-3xl font-bold leading-[1.08] sm:text-6xl sm:leading-[1.02] lg:text-7xl">
+          <h1 className="mt-6 max-w-[21rem] text-3xl font-bold leading-[1.08] sm:max-w-none sm:text-6xl sm:leading-[1.02] lg:text-7xl">
             Frontend Fix + Cleanup Sprints
           </h1>
           <p className="mt-6 max-w-[21.5rem] text-lg leading-8 text-zinc-200 sm:max-w-2xl sm:text-xl">
