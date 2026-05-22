@@ -95,10 +95,16 @@ export function HeroSection() {
             </Badge>
           </MaskedReveal>
 
-          <h1 className="mx-auto mt-5 max-w-[22rem] text-[2.72rem] font-semibold leading-[0.98] text-white sm:max-w-5xl sm:text-[4.7rem] sm:leading-[0.94] lg:mx-0 lg:text-[5.8rem]">
-            <MaskedReveal delay="0.18s">Fix it.</MaskedReveal>
-            <MaskedReveal delay="0.34s">Clean it.</MaskedReveal>
-            <MaskedReveal delay="0.5s">Build it right.</MaskedReveal>
+          <h1 className="mx-auto mt-5 max-w-[22rem] text-[2.72rem] font-semibold leading-[1.04] text-white sm:max-w-5xl sm:text-[4.7rem] sm:leading-[1] lg:mx-0 lg:text-[5.8rem]">
+            <MaskedReveal className="headline-reveal" delay="0.18s">
+              Fix it.
+            </MaskedReveal>
+            <MaskedReveal className="headline-reveal" delay="0.34s">
+              Clean it.
+            </MaskedReveal>
+            <MaskedReveal className="headline-reveal" delay="0.5s">
+              Build it right.
+            </MaskedReveal>
           </h1>
 
           <MaskedReveal className="mx-auto mt-5 max-w-[23rem] sm:max-w-2xl lg:mx-0" delay="0.72s">

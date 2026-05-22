@@ -100,6 +100,11 @@ body {
     overflow: hidden;
   }
 
+  .headline-reveal {
+    margin-bottom: -0.12em;
+    padding-bottom: 0.12em;
+  }
+
   .reveal-clip > * {
     animation: masked-rise 0.92s cubic-bezier(0.16, 1, 0.3, 1) both;
     animation-delay: var(--reveal-delay, 0s);
