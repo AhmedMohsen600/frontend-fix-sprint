@@ -60,10 +60,10 @@ export function HeroSection() {
           <Badge className="border-white/20 bg-white/10 text-white" tone="neutral">
             React/Next.js fixes + cleanup
           </Badge>
-          <h1 className="mt-6 text-5xl font-bold leading-[1.02] sm:text-6xl lg:text-7xl">
+          <h1 className="mt-6 text-4xl font-bold leading-[1.04] sm:text-6xl sm:leading-[1.02] lg:text-7xl">
             Frontend Fix + Cleanup Sprints
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-200 sm:text-xl">
+          <p className="mt-6 max-w-[21.5rem] text-lg leading-8 text-zinc-200 sm:max-w-2xl sm:text-xl">
             Fix React/Next.js UI issues or clean one messy frontend feature in a
             small scoped sprint. Starting from $250, delivered in 3-5 days.
           </p>
