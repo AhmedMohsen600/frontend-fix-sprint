@@ -58,7 +58,7 @@ export function HeroSection() {
       <div className="relative mx-auto flex max-w-7xl flex-col justify-center px-4 py-20 sm:px-6 lg:px-8">
         <div className="max-w-3xl pt-6 text-white">
           <Badge className="border-white/20 bg-white/10 text-white" tone="neutral">
-            React/Next.js UI fixes and messy code cleanup, scoped small
+            React/Next.js fixes + cleanup
           </Badge>
           <h1 className="mt-6 text-5xl font-bold leading-[1.02] sm:text-6xl lg:text-7xl">
             Frontend Fix + Cleanup Sprints
