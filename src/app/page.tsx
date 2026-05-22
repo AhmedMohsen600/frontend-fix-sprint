@@ -1,3 +1,4 @@
+import { AboutAhmedSection } from "@/components/site/about-ahmed-section";
 import { CleanupSection } from "@/components/site/cleanup-section";
 import { CtaSection } from "@/components/site/cta-section";
 import { FaqSection } from "@/components/site/faq-section";
@@ -22,6 +23,7 @@ export default function Home() {
         <ProcessSection />
         <PricingSection />
         <FaqSection />
+        <AboutAhmedSection />
         <CtaSection />
       </main>
     </>

@@ -8,11 +8,11 @@ type BadgeProps = {
 };
 
 const tones = {
-  neutral: "border-line bg-white text-ink",
-  mint: "border-emerald-200 bg-emerald-50 text-emerald-900",
-  sky: "border-sky-200 bg-sky-50 text-sky-900",
-  coral: "border-orange-200 bg-orange-50 text-orange-900",
-  gold: "border-yellow-200 bg-yellow-50 text-yellow-900"
+  neutral: "border-slate-200 bg-white text-slate-700",
+  mint: "border-emerald-200 bg-emerald-50 text-emerald-800",
+  sky: "border-blue-200 bg-blue-50 text-blue-800",
+  coral: "border-red-200 bg-red-50 text-red-800",
+  gold: "border-amber-200 bg-amber-50 text-amber-800"
 };
 
 export function Badge({ children, className, tone = "neutral" }: BadgeProps) {

@@ -8,7 +8,7 @@ export function ProcessSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           align="center"
-          description="The buyer sends the issue list. Ahmed confirms the sprint scope. Codex helps execute the frontend work, verification, and delivery notes."
+          description="The buyer sends the issue list. Ahmed confirms the sprint scope, implements the frontend work, checks the affected screens, and sends clear delivery notes."
           eyebrow="Process"
           title="Simple enough to close without a long call."
         />

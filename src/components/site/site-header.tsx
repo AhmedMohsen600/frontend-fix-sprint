@@ -14,10 +14,10 @@ const navItems = [
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-white/90 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link className="flex items-center gap-3" href="/">
-          <span className="flex size-9 items-center justify-center rounded-lg bg-ink text-sm font-bold text-white">
+          <span className="flex size-9 items-center justify-center rounded-lg bg-sky text-sm font-bold text-white shadow-sm">
             AM
           </span>
           <span className="hidden text-sm font-semibold text-ink sm:inline">
@@ -28,7 +28,7 @@ export function SiteHeader() {
         <nav aria-label="Main navigation" className="hidden items-center gap-6 md:flex">
           {navItems.map((item) => (
             <Link
-              className="text-sm font-medium text-zinc-600 transition hover:text-ink"
+              className="text-sm font-medium text-slate-600 transition hover:text-sky"
               href={item.href}
               key={item.href}
             >

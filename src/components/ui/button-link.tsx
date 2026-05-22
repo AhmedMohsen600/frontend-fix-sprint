@@ -9,9 +9,9 @@ type ButtonLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
 };
 
 const variants = {
-  primary: "border-ink bg-ink text-white hover:bg-black",
-  secondary: "border-line bg-white text-ink hover:border-ink",
-  ghost: "border-transparent bg-transparent text-ink hover:bg-white/70"
+  primary: "border-sky bg-sky text-white hover:border-blue-700 hover:bg-blue-700",
+  secondary: "border-line bg-white text-ink hover:border-sky hover:text-sky",
+  ghost: "border-transparent bg-transparent text-ink hover:bg-sky/5 hover:text-sky"
 };
 
 export function ButtonLink({
@@ -25,7 +25,7 @@ export function ButtonLink({
   return (
     <a
       className={cn(
-        "inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border px-4 py-2 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-ink focus:ring-offset-2",
+        "inline-flex min-h-11 cursor-pointer items-center justify-center gap-2 rounded-lg border px-4 py-2 text-sm font-semibold shadow-sm transition focus:outline-none focus:ring-2 focus:ring-sky focus:ring-offset-2",
         variants[variant],
         className
       )}
