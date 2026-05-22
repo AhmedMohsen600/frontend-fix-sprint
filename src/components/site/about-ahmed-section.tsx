@@ -1,6 +1,7 @@
 import { Github, Linkedin } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button-link";
+import { ScrollReveal } from "@/components/ui/reveal";
 
 const experienceAreas = [
   "React.js",
@@ -14,31 +15,37 @@ const experienceAreas = [
   "Admin panels",
   "Frontend architecture",
   "Performance",
-  "Clean maintainable code"
+  "Scalable frontend code"
 ];
 
 export function AboutAhmedSection() {
   return (
-    <section className="bg-paper py-20" id="about-ahmed">
+    <section className="dark-section py-20 text-white lg:py-28" id="about-ahmed">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:px-8">
-        <div>
-          <Badge tone="mint">About Ahmed</Badge>
-          <h2 className="mt-4 max-w-2xl text-3xl font-bold leading-tight text-ink sm:text-4xl">
-            Senior frontend judgment, AI-assisted speed
+        <ScrollReveal>
+          <Badge className="border-white/10 bg-white/10 text-blue-100" tone="neutral">
+            About Ahmed
+          </Badge>
+          <h2 className="mt-4 max-w-2xl text-4xl font-semibold leading-[1.04] text-white sm:text-5xl">
+            Senior frontend engineer. AI-assisted execution.
           </h2>
-          <p className="mt-4 text-base leading-7 text-zinc-600 sm:text-lg">
-            I am Ahmed Mohsen, a Senior Frontend Engineer from Egypt. I have spent
-            4+ years building React, Next.js, and React Native products by hand,
-            including dashboards, payment portals, mobile apps, admin panels,
-            analytics UIs, and polished marketing pages.
+          <p className="mt-5 text-base leading-7 text-white/68 sm:text-lg">
+            {"I'm Ahmed Mohsen, a Senior Frontend Engineer from Egypt with 4+ years of hands-on experience building React, Next.js, and React Native products."}
           </p>
-          <p className="mt-4 text-base leading-7 text-zinc-600 sm:text-lg">
-            I use AI tools to move faster, but I still own the structure, review
-            the implementation, protect the UX, and make sure the final result is
-            clean, maintainable, and production-ready.
+          <p className="mt-4 text-base leading-7 text-white/68 sm:text-lg">
+            Before AI tools became part of my workflow, I was already building
+            production dashboards, payment portals, mobile apps, admin panels,
+            analytics UIs, and polished marketing pages by hand.
+          </p>
+          <p className="mt-4 text-base leading-7 text-white/68 sm:text-lg">
+            Today, I use AI to move faster, but not to replace engineering
+            judgment. I still understand the codebase, own the architecture,
+            review every decision, protect the UX, and make sure the final result
+            is clean, maintainable, scalable, and production-ready.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <ButtonLink
+              className="border-white/14 bg-white/10 text-white hover:border-white/30 hover:bg-white/14 hover:text-white"
               href="https://github.com/AhmedMohsen600"
               icon={<Github aria-hidden="true" className="size-4" />}
               iconPosition="start"
@@ -58,36 +65,36 @@ export function AboutAhmedSection() {
               Connect on LinkedIn
             </ButtonLink>
           </div>
-        </div>
+        </ScrollReveal>
 
-        <article className="rounded-lg border border-line bg-white p-6 shadow-sm">
-          <div className="flex flex-col gap-3 border-b border-line pb-6 sm:flex-row sm:items-center sm:justify-between">
+        <ScrollReveal delay={120}>
+        <article className="rounded-[26px] border border-white/10 bg-white/[0.06] p-6 shadow-dark-soft backdrop-blur">
+          <div className="flex flex-col gap-3 border-b border-white/10 pb-6 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
+              <p className="text-sm font-semibold uppercase text-white/42">
                 Senior Frontend Engineer
               </p>
-              <h3 className="mt-2 text-2xl font-bold text-ink">Ahmed Mohsen</h3>
+              <h3 className="mt-2 text-2xl font-bold text-white">Ahmed Mohsen</h3>
             </div>
-            <Badge className="w-fit" tone="sky">
+            <Badge className="w-fit border-white/10 bg-white/10 text-blue-100" tone="neutral">
               Egypt / 4+ years
             </Badge>
           </div>
           <div className="mt-6 flex flex-wrap gap-2">
             {experienceAreas.map((area) => (
               <span
-                className="rounded-full border border-line bg-paper px-3 py-1.5 text-sm font-medium text-zinc-700"
+                className="rounded-full border border-white/10 bg-white/[0.06] px-3 py-1.5 text-sm font-medium text-white/68"
                 key={area}
               >
                 {area}
               </span>
             ))}
           </div>
-          <p className="mt-6 border-t border-line pt-6 text-sm leading-6 text-zinc-600">
-            Best fit for teams that need a real engineer to clean up a visible
-            frontend problem quickly: scoped, reviewed, and delivered with notes
-            the team can understand after handoff.
+          <p className="mt-6 border-t border-white/10 pt-6 text-sm font-semibold leading-6 text-white/76 sm:text-base sm:leading-7">
+            {"You're not hiring random generated code. You're hiring a frontend engineer who knows what good code should look like, how it should scale, and how to use AI to deliver it faster."}
           </p>
         </article>
+        </ScrollReveal>
       </div>
     </section>
   );

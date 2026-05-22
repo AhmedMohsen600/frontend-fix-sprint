@@ -5,16 +5,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#0f172a",
-        paper: "#f7f9fc",
-        line: "#d8e2ef",
-        mint: "#0f766e",
-        coral: "#dc2626",
-        gold: "#b45309",
-        sky: "#2563eb"
+        ink: "#070910",
+        night: "#05060a",
+        surface: "#0d111b",
+        "surface-soft": "#121621",
+        paper: "#f7f8fb",
+        line: "#d8deea",
+        mint: "#10b981",
+        coral: "#ef4444",
+        gold: "#fbb041",
+        sky: "#0542ff"
       },
       boxShadow: {
-        soft: "0 22px 70px rgba(15, 23, 42, 0.12)"
+        glow: "0 0 80px rgba(5, 66, 255, 0.24)",
+        soft: "0 24px 90px rgba(7, 9, 16, 0.14)",
+        "dark-soft": "0 24px 90px rgba(0, 0, 0, 0.28)"
       }
     }
   },

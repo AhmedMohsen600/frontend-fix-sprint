@@ -14,13 +14,13 @@ const navItems = [
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header className="fixed top-0 z-40 w-full border-b border-white/10 bg-black/45 text-white backdrop-blur-2xl">
+      <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link className="flex items-center gap-3" href="/">
-          <span className="flex size-9 items-center justify-center rounded-lg bg-sky text-sm font-bold text-white shadow-sm">
+          <span className="flex size-10 items-center justify-center rounded-[12px] bg-sky text-sm font-bold text-white shadow-[0_0_34px_rgba(5,66,255,0.32)]">
             AM
           </span>
-          <span className="hidden text-sm font-semibold text-ink sm:inline">
+          <span className="hidden text-sm font-semibold text-white sm:inline">
             Ahmed Mohsen
           </span>
         </Link>
@@ -28,7 +28,7 @@ export function SiteHeader() {
         <nav aria-label="Main navigation" className="hidden items-center gap-6 md:flex">
           {navItems.map((item) => (
             <Link
-              className="text-sm font-medium text-slate-600 transition hover:text-sky"
+              className="text-sm font-medium text-white/62 transition hover:text-white"
               href={item.href}
               key={item.href}
             >
@@ -38,7 +38,7 @@ export function SiteHeader() {
         </nav>
 
         <ButtonLink
-          className="hidden sm:inline-flex"
+          className="hidden min-h-10 px-4 sm:inline-flex"
           href={getContactHref()}
           icon={<ArrowRight aria-hidden="true" className="size-4" />}
           variant="primary"

@@ -73,6 +73,51 @@ I refactor one messy React/Next.js feature or module into clean, maintainable, s
 
 3-5 days for one scoped feature/module.
 
+## Premium Option: Final Boss Build
+
+### One-line offer
+
+I build the full React/Next.js frontend project from scratch when the client needs more than a small fix or one module cleanup.
+
+### Best for
+
+- Founders building an MVP.
+- Startups needing a clean frontend.
+- Agencies needing frontend execution.
+- Teams with designs ready in Figma.
+- Businesses replacing a weak frontend.
+
+### Included
+
+- Full frontend implementation.
+- React/Next.js project setup.
+- Clean architecture.
+- Responsive UI.
+- Reusable components.
+- API integration.
+- Forms and validation.
+- Dashboard/admin panel pages if needed.
+- Performance-conscious implementation.
+- Clean handoff.
+- Deployment support.
+
+### Scope rules
+
+- Requires clear requirements or Figma/design direction.
+- Backend is not included unless agreed separately.
+- No vague unlimited pages.
+- No "build everything" without scope.
+- Project must be broken into milestones.
+- Deposit required before starting.
+
+### Price
+
+Custom quote. Starts from 1,500 USD.
+
+### Delivery
+
+Timeline depends on scope. Small MVPs or landing projects can start from 2-4 weeks.
+
 ## Monthly Frontend Care
 
 500 USD/month.
@@ -81,4 +126,4 @@ Includes two monthly sprints, priority async support, and a recurring UI/code qu
 
 ## CTA
 
-Send me the app URL, repo access, screenshots, issue list, or messy feature/module. I will confirm what fits before starting.
+Send me the app URL, repo access, screenshots, issue list, messy feature/module, or Figma/design direction. I will confirm what fits before starting.

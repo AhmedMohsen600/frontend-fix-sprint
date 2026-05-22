@@ -8,18 +8,18 @@ type BadgeProps = {
 };
 
 const tones = {
-  neutral: "border-slate-200 bg-white text-slate-700",
-  mint: "border-emerald-200 bg-emerald-50 text-emerald-800",
-  sky: "border-blue-200 bg-blue-50 text-blue-800",
-  coral: "border-red-200 bg-red-50 text-red-800",
-  gold: "border-amber-200 bg-amber-50 text-amber-800"
+  neutral: "border-white/10 bg-white/8 text-white/72",
+  mint: "border-emerald-300/20 bg-emerald-300/10 text-emerald-100",
+  sky: "border-blue-300/20 bg-blue-400/10 text-blue-100",
+  coral: "border-red-300/20 bg-red-300/10 text-red-100",
+  gold: "border-amber-300/20 bg-amber-300/10 text-amber-100"
 };
 
 export function Badge({ children, className, tone = "neutral" }: BadgeProps) {
   return (
     <span
       className={cn(
-        "inline-flex w-fit items-center rounded-full border px-3 py-1 text-xs font-semibold",
+        "inline-flex w-fit items-center rounded-[10px] border px-3 py-1 text-xs font-semibold",
         tones[tone],
         className
       )}

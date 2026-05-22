@@ -66,8 +66,30 @@ export const servicePackages = {
       "Delivery notes after each sprint"
     ],
     bestFor: "Teams that want a reliable frontend engineer without a full-time hire"
+  },
+  finalBoss: {
+    name: "Final Boss Build",
+    price: 1500,
+    priceLabel: "Custom quote",
+    timeline: "From 2-4 weeks",
+    description:
+      "Hire Ahmed to build your full frontend project from scratch: Figma, product idea, or requirements turned into a clean React/Next.js frontend.",
+    includes: [
+      "Full frontend implementation",
+      "React/Next.js project setup",
+      "Clean architecture",
+      "Responsive UI",
+      "Reusable components",
+      "API integration",
+      "Forms and validation",
+      "Dashboard/admin panel pages if needed",
+      "Performance-conscious implementation",
+      "Clean handoff and deployment support"
+    ],
+    bestFor:
+      "Founders, startups, agencies, and teams with clear requirements or Figma designs"
   }
-} satisfies Record<"sprint" | "cleanup" | "retainer", ServicePackage>;
+} satisfies Record<"sprint" | "cleanup" | "retainer" | "finalBoss", ServicePackage>;
 
 export const proofStats = [
   { label: "Sprint price", value: "$250", detail: "fixed scope" },
@@ -162,6 +184,23 @@ export const cleanupScopeRules = [
   "No redesign unless requested",
   "No unlimited refactoring",
   "Must define the exact feature/module before starting"
+];
+
+export const finalBossBuildBestFor = [
+  "Founders building an MVP",
+  "Startups needing a clean frontend",
+  "Agencies needing frontend execution",
+  "Teams with designs ready in Figma",
+  "Businesses replacing a weak frontend"
+];
+
+export const finalBossBuildScopeRules = [
+  "Requires clear requirements or Figma/design direction",
+  "Backend is not included unless agreed separately",
+  "No vague unlimited pages",
+  "No build everything without scope",
+  "Project must be broken into milestones",
+  "Deposit required before starting"
 ];
 
 export const beforeAfterValue = [

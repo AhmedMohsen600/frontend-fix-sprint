@@ -10,9 +10,28 @@ I need help with:
 - Deadline:
 - Budget:`;
 
-export function getContactHref(subject = "Frontend Fix Sprint Request") {
+export const finalBossBuildEmailBody = `Hi Ahmed,
+
+I want to discuss a full frontend build.
+
+Project type:
+Current stage:
+Do you have Figma/designs?
+Main pages/features:
+Tech stack:
+Deadline:
+Budget range:`;
+
+export function getContactHref(
+  subject = "Frontend Fix Sprint Request",
+  body = frontendIssueEmailBody
+) {
   const encodedSubject = encodeURIComponent(subject);
-  const encodedBody = encodeURIComponent(frontendIssueEmailBody);
+  const encodedBody = encodeURIComponent(body);
 
   return `mailto:${contactEmail}?subject=${encodedSubject}&body=${encodedBody}`;
+}
+
+export function getFinalBossBuildHref() {
+  return getContactHref("Final Boss Build Request", finalBossBuildEmailBody);
 }

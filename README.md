@@ -1,6 +1,6 @@
 # Frontend Fix Sprint
 
-A productized frontend service system and demo app for Ahmed Mohsen, built to help close frontend fix, cleanup, or monthly care clients.
+A productized frontend service system and demo app for Ahmed Mohsen, built to help close frontend fix, cleanup, full build, or monthly care clients.
 
 The repo includes:
 
@@ -32,6 +32,20 @@ Delivery: 3-5 days for one scoped feature/module.
 500 USD/month for two monthly frontend sprints plus priority support.
 
 Monthly care can include UI fixes, cleanup work, dashboard polish, and small code quality reviews.
+
+### Final Boss Build
+
+Hire Ahmed to build the full frontend project from scratch when the client needs more than a small sprint.
+
+Best for founders building an MVP, startups needing a clean frontend, agencies needing frontend execution, teams with Figma ready, or businesses replacing a weak frontend.
+
+Includes React/Next.js setup, clean architecture, responsive UI, reusable components, API integration, forms and validation, dashboard/admin panel pages if needed, performance-conscious implementation, clean handoff, and deployment support.
+
+Price: custom quote, starting from 1,500 USD.
+
+Delivery: timeline depends on scope. Small MVPs or landing projects can start from 2-4 weeks.
+
+Scope rules: requires clear requirements or Figma/design direction, backend is not included unless agreed separately, no vague unlimited pages, milestones required, and deposit required before starting.
 
 ## Run Locally
 
@@ -115,6 +129,24 @@ I need help with:
 - Budget:
 ```
 
+The full build CTA uses:
+
+```text
+Subject: Final Boss Build Request
+
+Hi Ahmed,
+
+I want to discuss a full frontend build.
+
+Project type:
+Current stage:
+Do you have Figma/designs?
+Main pages/features:
+Tech stack:
+Deadline:
+Budget range:
+```
+
 ## How To Use This To Sell
 
 1. Deploy the site.
@@ -122,7 +154,7 @@ I need help with:
 3. Send the short DMs from `docs/outreach-messages.md`.
 4. Track every lead in `docs/lead-tracker-template.md`.
 5. When someone replies, send `docs/client-proposal.md`.
-6. Qualify whether they need a Fix Sprint, Cleanup Sprint, or Monthly Care.
+6. Qualify whether they need a Fix Sprint, Cleanup Sprint, Final Boss Build, or Monthly Care.
 7. When a paid task arrives, paste the project details into Codex using `docs/paid-task-codex-prompt.md`.
 
 ## What Ahmed Should Do Next
@@ -134,6 +166,7 @@ I need help with:
 5. Follow up after 2-4 days.
 6. Close the first qualified lead with either a 250 USD Fix Sprint or 300-500 USD Cleanup Sprint.
 7. After successful delivery, offer the 500 USD/month option only if they have recurring frontend work.
+8. Only pitch Final Boss Build when the client clearly needs a larger scoped frontend project and can define milestones.
 
 ## Launch Now
 

@@ -63,3 +63,11 @@
 2. Fix Sprint is for visible UI issues. Cleanup Sprint is for messy React/Next.js code. Both are scoped small and delivered in 3-5 days.
 
 3. I need the app URL, repo access if code changes are needed, screenshots or module name, setup notes, and the expected outcome.
+
+## 3 Final Boss Build DMs
+
+1. Founder with MVP idea: Hey [Name], if you are turning an MVP idea into a real frontend, I can help build the React/Next.js side with clear scope, milestones, and clean handoff. Full builds start from $1,500 after scope review.
+
+2. Agency needing frontend help: Hey [Name], if your agency needs extra React/Next.js execution for a frontend-heavy client project, I can help on a scoped full build. Clear pages, milestones, and handoff; no vague open-ended scope.
+
+3. Startup with Figma ready: Hey [Name], if your Figma is ready and frontend build is the blocker, I can turn the designs into a clean React/Next.js frontend with responsive UI, API integration, and production handoff.

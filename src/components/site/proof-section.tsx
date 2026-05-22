@@ -1,20 +1,22 @@
 import { ArrowRight } from "lucide-react";
-import { ButtonLink } from "@/components/ui/button-link";
 import { Badge } from "@/components/ui/badge";
+import { ButtonLink } from "@/components/ui/button-link";
+import { PremiumCard, PremiumCardGlow } from "@/components/ui/premium-card";
+import { ScrollReveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { demoCapabilities } from "@/features/dashboard-demo";
 import { beforeAfterValue } from "@/features/service";
 
 export function ProofSection() {
   return (
-    <section className="bg-white py-20" id="proof">
+    <section className="dark-section py-20 lg:py-28" id="proof">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <div>
+        <div className="grid gap-12 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
+          <ScrollReveal className="lg:sticky lg:top-28">
             <SectionHeading
-              description="The demo is intentionally frontend-focused: dashboard hierarchy, data density, responsive behavior, visible states, and the kind of delivery notes clients can approve quickly."
+              description="The demo is a compact proof piece: hierarchy, data density, responsive behavior, visible states, and client-friendly delivery notes."
               eyebrow="Proof"
-              title="Show the buyer what a cleaned-up sprint looks like."
+              title="A dashboard demo that shows the kind of polish buyers pay for."
             />
             <ButtonLink
               className="mt-8"
@@ -23,28 +25,43 @@ export function ProofSection() {
             >
               View dashboard demo
             </ButtonLink>
-          </div>
+          </ScrollReveal>
+
           <div className="grid gap-4 sm:grid-cols-2">
-            {demoCapabilities.map((capability) => (
-              <article
-                className="rounded-lg border border-line bg-paper p-5"
-                key={capability.title}
-              >
-                <capability.icon aria-hidden="true" className="size-5 text-ink" />
-                <h3 className="mt-5 text-base font-bold text-ink">{capability.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-zinc-600">{capability.detail}</p>
-              </article>
+            {demoCapabilities.map((capability, index) => (
+              <ScrollReveal delay={index * 80} key={capability.title}>
+                <PremiumCard className="h-full">
+                  <PremiumCardGlow />
+                  <div className="relative z-10 p-6">
+                    <div className="flex items-center justify-between gap-4">
+                      <capability.icon aria-hidden="true" className="size-5 text-blue-200" />
+                      <Badge tone={index % 2 === 0 ? "sky" : "mint"}>Proof</Badge>
+                    </div>
+                    <h3 className="mt-6 text-xl font-semibold text-white">
+                      {capability.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-6 text-white/62">{capability.detail}</p>
+                  </div>
+                </PremiumCard>
+              </ScrollReveal>
             ))}
           </div>
         </div>
 
-        <div className="mt-12 grid gap-4 md:grid-cols-3">
-          {beforeAfterValue.map((item) => (
-            <article className="rounded-lg border border-line bg-paper p-5" key={item.before}>
-              <Badge tone="neutral">Before / after</Badge>
-              <p className="mt-5 text-sm leading-6 text-zinc-500">{item.before}</p>
-              <p className="mt-4 text-base font-semibold leading-7 text-ink">{item.after}</p>
-            </article>
+        <div className="mt-16 grid gap-4 md:grid-cols-3">
+          {beforeAfterValue.map((item, index) => (
+            <ScrollReveal delay={index * 80} key={item.before}>
+              <PremiumCard className="h-full">
+                <PremiumCardGlow />
+                <div className="relative z-10 p-6">
+                  <Badge tone="neutral">Before / after</Badge>
+                  <p className="mt-5 text-sm leading-6 text-white/48">{item.before}</p>
+                  <p className="mt-4 text-lg font-semibold leading-7 text-white">
+                    {item.after}
+                  </p>
+                </div>
+              </PremiumCard>
+            </ScrollReveal>
           ))}
         </div>
       </div>

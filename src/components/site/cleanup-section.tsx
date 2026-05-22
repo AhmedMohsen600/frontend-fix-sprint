@@ -1,6 +1,8 @@
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button-link";
+import { PremiumCard, PremiumCardGlow } from "@/components/ui/premium-card";
+import { ScrollReveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import {
   cleanupIncludedItems,
@@ -11,70 +13,96 @@ import {
 
 export function CleanupSection() {
   return (
-    <section className="bg-paper py-20" id="cleanup">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-          <div>
-            <SectionHeading
-              description="I help teams refactor messy React/Next.js frontend code into clean, maintainable, scalable structure without changing the current UI or breaking existing behavior."
-              eyebrow="Second offer"
-              title="Have messy React code nobody wants to touch?"
-            />
-            <p className="mt-5 leading-7 text-zinc-600">
-              The Frontend Cleanup Sprint is for one scoped feature or module:
-              split huge components, extract logic into hooks, remove duplication,
-              simplify state and props, and leave notes so the team can move faster.
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink
-                href={getContactHref("Frontend Cleanup Sprint Request")}
-                icon={<ArrowRight aria-hidden="true" className="size-4" />}
-              >
-                Send messy code/module
-              </ButtonLink>
-              <Badge className="justify-center px-4 py-3" tone="mint">
-                From $300 · 3-5 days
-              </Badge>
-            </div>
-          </div>
+    <section className="dark-section px-4 py-20 sm:px-6 lg:px-8 lg:py-28" id="cleanup">
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_60%_45%_at_76%_8%,rgba(5,66,255,0.24),transparent_56%)]"
+      />
+      <div className="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
+        <ScrollReveal className="lg:sticky lg:top-28">
+          <SectionHeading
+            description="I clean and restructure dirty React/Next.js frontend code so the team can move faster, without changing the current UI or breaking behavior."
+            eyebrow="Cleanup Sprint"
+            theme="dark"
+            title="Have messy React code nobody wants to touch?"
+          />
+          <p className="mt-6 max-w-xl text-base leading-7 text-white/58">
+            One scoped feature or module gets split, renamed, simplified, and
+            documented. The result is code your team can actually maintain after
+            the sprint.
+          </p>
+          <ButtonLink
+            className="mt-8 border-white bg-white text-ink hover:border-blue-100 hover:bg-blue-50"
+            href={getContactHref("Frontend Cleanup Sprint Request")}
+            icon={<ArrowRight aria-hidden="true" className="size-4" />}
+          >
+            Send messy code/module
+          </ButtonLink>
+        </ScrollReveal>
 
-          <div className="grid gap-4">
-            <article className="rounded-lg border border-line bg-white p-6 shadow-sm">
-              <Badge tone="coral">Good fit when you have</Badge>
-              <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                {cleanupPainItems.map((item) => (
-                  <p className="text-sm font-medium leading-6 text-zinc-700" key={item}>
-                    {item}
-                  </p>
-                ))}
+        <div className="grid gap-5">
+          <ScrollReveal>
+            <PremiumCard>
+              <PremiumCardGlow />
+              <div className="relative z-10 p-6 sm:p-7">
+                <Badge className="border-red-300/20 bg-red-300/10 text-red-100" tone="neutral">
+                  Good fit when you have
+                </Badge>
+                <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                  {cleanupPainItems.map((item, index) => (
+                    <p
+                      className="rounded-[14px] border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-medium leading-6 text-white/72 transition duration-300 hover:border-blue-300/24 hover:bg-white/[0.07]"
+                      key={item}
+                      style={{ transitionDelay: `${index * 20}ms` }}
+                    >
+                      {item}
+                    </p>
+                  ))}
+                </div>
               </div>
-            </article>
+            </PremiumCard>
+          </ScrollReveal>
 
-            <article className="rounded-lg border border-line bg-white p-6 shadow-sm">
-              <Badge tone="sky">Included</Badge>
-              <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                {cleanupIncludedItems.slice(0, 8).map((item) => (
-                  <p className="flex gap-3 text-sm leading-6 text-zinc-700" key={item}>
-                    <CheckCircle2
-                      aria-hidden="true"
-                      className="mt-0.5 size-4 shrink-0 text-emerald-600"
-                    />
-                    {item}
-                  </p>
-                ))}
+          <div className="grid gap-5 md:grid-cols-2">
+            <ScrollReveal delay={90}>
+            <PremiumCard>
+              <PremiumCardGlow />
+              <div className="relative z-10 p-6 sm:p-7">
+                <Badge className="border-emerald-300/20 bg-emerald-300/10 text-emerald-100" tone="neutral">
+                  Included
+                </Badge>
+                <div className="mt-6 grid gap-3">
+                  {cleanupIncludedItems.slice(0, 7).map((item) => (
+                    <p className="flex gap-3 text-sm leading-6 text-white/68" key={item}>
+                      <CheckCircle2
+                        aria-hidden="true"
+                        className="mt-0.5 size-4 shrink-0 text-emerald-300"
+                      />
+                      {item}
+                    </p>
+                  ))}
+                </div>
               </div>
-            </article>
+            </PremiumCard>
+            </ScrollReveal>
 
-            <article className="rounded-lg border border-line bg-white p-6 shadow-sm">
-              <Badge tone="neutral">Scope rules</Badge>
-              <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                {cleanupScopeRules.map((item) => (
-                  <p className="text-sm leading-6 text-zinc-600" key={item}>
-                    {item}
-                  </p>
-                ))}
+            <ScrollReveal delay={180}>
+            <PremiumCard>
+              <PremiumCardGlow />
+              <div className="relative z-10 p-6 sm:p-7">
+                <Badge className="border-white/20 bg-white/10 text-white" tone="neutral">
+                  Scope rules
+                </Badge>
+                <div className="mt-6 grid gap-3">
+                  {cleanupScopeRules.map((item) => (
+                    <p className="text-sm leading-6 text-white/58" key={item}>
+                      {item}
+                    </p>
+                  ))}
+                </div>
               </div>
-            </article>
+            </PremiumCard>
+            </ScrollReveal>
           </div>
         </div>
       </div>

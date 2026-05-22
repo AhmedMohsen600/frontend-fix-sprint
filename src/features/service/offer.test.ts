@@ -1,9 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { getContactHref } from "./contact";
+import { getContactHref, getFinalBossBuildHref } from "./contact";
 import {
   calculateSprintFitScore,
   cleanupIncludedItems,
   cleanupScopeRules,
+  finalBossBuildScopeRules,
   formatUsd,
   notIncludedItems,
   servicePackages,
@@ -25,6 +26,17 @@ describe("service offer model", () => {
     expect(cleanupIncludedItems).toContain("Keep the same UI and behavior");
     expect(cleanupScopeRules).toContain("No full app rewrite");
     expect(cleanupScopeRules).toContain("Must define the exact feature/module before starting");
+  });
+
+  it("defines Final Boss Build as a premium scoped frontend build offer", () => {
+    expect(servicePackages.finalBoss.name).toBe("Final Boss Build");
+    expect(servicePackages.finalBoss.price).toBe(1500);
+    expect(servicePackages.finalBoss.priceLabel).toBe("Custom quote");
+    expect(servicePackages.finalBoss.timeline).toBe("From 2-4 weeks");
+    expect(servicePackages.finalBoss.includes).toContain("Full frontend implementation");
+    expect(servicePackages.finalBoss.includes).toContain("Clean handoff and deployment support");
+    expect(finalBossBuildScopeRules).toContain("Project must be broken into milestones");
+    expect(finalBossBuildScopeRules).toContain("Deposit required before starting");
   });
 
   it("scores urgent frontend polish requests as a strong fit", () => {
@@ -59,6 +71,15 @@ describe("service offer model", () => {
     expect(decodeURIComponent(href)).toContain("- Project type:");
     expect(decodeURIComponent(href)).toContain("- Tech stack:");
     expect(decodeURIComponent(href)).toContain("- Budget:");
+  });
+
+  it("builds a full frontend build request email with project scope fields", () => {
+    const href = getFinalBossBuildHref();
+
+    expect(href).toContain("subject=Final%20Boss%20Build%20Request");
+    expect(decodeURIComponent(href)).toContain("I want to discuss a full frontend build.");
+    expect(decodeURIComponent(href)).toContain("Do you have Figma/designs?");
+    expect(decodeURIComponent(href)).toContain("Budget range:");
   });
 
   it("lists concrete frontend fixes and explicit exclusions", () => {
