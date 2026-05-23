@@ -4,7 +4,11 @@ import { SiteHeader } from "./site-header";
 
 describe("SiteHeader", () => {
   it("opens a mobile menu with navigation links and WhatsApp CTA", () => {
-    render(<SiteHeader />);
+    const { container } = render(<SiteHeader />);
+
+    expect(
+      container.querySelector('img[src*="ahmed-mohsen-mark-white.png"]')
+    ).toBeInTheDocument();
 
     const openButton = screen.getByRole("button", { name: "Open menu" });
     expect(openButton).toHaveAttribute("aria-expanded", "false");

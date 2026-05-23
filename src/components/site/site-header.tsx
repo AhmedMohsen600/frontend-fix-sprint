@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button-link";
@@ -27,8 +28,16 @@ export function SiteHeader() {
     <header className="fixed top-0 z-40 w-full border-b border-white/10 bg-black/45 text-white backdrop-blur-2xl">
       <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link className="flex items-center gap-3" href="/" onClick={closeMenu}>
-          <span className="flex size-10 items-center justify-center rounded-[12px] bg-sky text-sm font-bold text-white shadow-[0_0_34px_rgba(5,66,255,0.32)]">
-            AM
+          <span className="flex h-11 w-[68px] items-center justify-center rounded-[14px] border border-white/10 bg-white/[0.06] px-2.5 shadow-[0_0_34px_rgba(5,66,255,0.22)]">
+            <Image
+              alt=""
+              aria-hidden="true"
+              className="h-7 w-auto object-contain"
+              height={122}
+              priority
+              src="/brand/ahmed-mohsen-mark-white.png"
+              width={192}
+            />
           </span>
           <span className="hidden text-sm font-semibold text-white sm:inline">
             Ahmed Mohsen
