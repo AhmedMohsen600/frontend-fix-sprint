@@ -18,13 +18,21 @@ export function ProofSection() {
               eyebrow="Proof"
               title="A dashboard demo that shows the kind of polish buyers pay for."
             />
-            <ButtonLink
-              className="mt-8"
-              href="/demo"
-              icon={<ArrowRight aria-hidden="true" className="size-4" />}
-            >
-              View dashboard demo
-            </ButtonLink>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
+              <ButtonLink
+                href="/demo"
+                icon={<ArrowRight aria-hidden="true" className="size-4" />}
+              >
+                View dashboard demo
+              </ButtonLink>
+              <ButtonLink
+                href="/use-cases"
+                icon={<ArrowRight aria-hidden="true" className="size-4" />}
+                variant="secondary"
+              >
+                View use cases
+              </ButtonLink>
+            </div>
           </ScrollReveal>
 
           <div className="grid gap-4 sm:grid-cols-2">

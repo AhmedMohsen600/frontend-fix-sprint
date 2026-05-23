@@ -7,6 +7,7 @@ const navItems = [
   { label: "Offer", href: "/#offer" },
   { label: "Fixes", href: "/#fixes" },
   { label: "Cleanup", href: "/#cleanup" },
+  { label: "Use cases", href: "/use-cases" },
   { label: "Proof", href: "/#proof" },
   { label: "Pricing", href: "/#pricing" },
   { label: "Demo", href: "/demo" }
@@ -25,7 +26,7 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav aria-label="Main navigation" className="hidden items-center gap-6 md:flex">
+        <nav aria-label="Main navigation" className="hidden items-center gap-5 lg:flex">
           {navItems.map((item) => (
             <Link
               className="text-sm font-medium text-white/62 transition hover:text-white"

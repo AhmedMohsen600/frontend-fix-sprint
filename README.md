@@ -6,6 +6,7 @@ The repo includes:
 
 - A Next.js service landing page.
 - A polished SaaS dashboard demo.
+- A use cases page for ERP/internal portal and payment website frontend work.
 - Sales copy, outreach messages, onboarding docs, delivery checklists, and reusable client prompts.
 - Tests for the service offer model.
 
@@ -73,6 +74,14 @@ Open:
 
 ```text
 http://localhost:3000
+```
+
+Useful pages:
+
+```text
+/
+/demo
+/use-cases
 ```
 
 If port 3000 is busy, Next.js will print the available local URL in the terminal.
@@ -150,7 +159,7 @@ Budget range:
 ## How To Use This To Sell
 
 1. Deploy the site.
-2. Open `/demo` and use it as proof when messaging leads.
+2. Open `/demo` and `/use-cases` and use them as proof when messaging leads.
 3. Send the short DMs from `docs/outreach-messages.md`.
 4. Track every lead in `docs/lead-tracker-template.md`.
 5. When someone replies, send `docs/client-proposal.md`.
