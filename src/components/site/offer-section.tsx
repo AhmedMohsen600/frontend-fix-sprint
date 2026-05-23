@@ -55,7 +55,7 @@ export function OfferSection() {
 
             return (
               <ScrollReveal delay={index * 110} key={card.title}>
-                <PremiumCard className={isPremium ? "lg:translate-y-8" : undefined}>
+                <PremiumCard className="h-full">
                   <PremiumCardGlow />
                   <div className="relative z-10 flex min-h-[370px] flex-col justify-between p-6 sm:p-7">
                     <div>
