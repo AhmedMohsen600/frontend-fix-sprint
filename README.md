@@ -55,13 +55,13 @@ Install dependencies:
 npm install
 ```
 
-Set your contact email:
+Set your WhatsApp contact number:
 
 ```bash
 cp .env.example .env.local
 ```
 
-Then edit `.env.local` and set `NEXT_PUBLIC_CONTACT_EMAIL`.
+Then edit `.env.local` and set `NEXT_PUBLIC_CONTACT_WHATSAPP_NUMBER`.
 
 Run the dev server:
 
@@ -92,15 +92,15 @@ Use this for production launch:
 
 1. Push this repo to GitHub.
 2. Connect/import the repo in Vercel.
-3. Add `NEXT_PUBLIC_CONTACT_EMAIL` in Vercel project environment variables.
+3. Add `NEXT_PUBLIC_CONTACT_WHATSAPP_NUMBER` in Vercel project environment variables.
 4. Deploy with the default Next.js settings.
 5. Open the live site and click the main CTA.
-6. Confirm the CTA opens an email draft to Ahmed.
+6. Confirm the CTA opens a WhatsApp chat to Ahmed.
 7. Add the live link to LinkedIn Featured and outreach messages.
 
-## Contact Email Setup
+## WhatsApp Contact Setup
 
-The primary CTA uses `NEXT_PUBLIC_CONTACT_EMAIL` to open a mail draft.
+The primary CTA uses `NEXT_PUBLIC_CONTACT_WHATSAPP_NUMBER` to open a WhatsApp chat.
 
 Local setup:
 
@@ -111,13 +111,13 @@ cp .env.example .env.local
 Then set:
 
 ```text
-NEXT_PUBLIC_CONTACT_EMAIL=your-real-email@example.com
+NEXT_PUBLIC_CONTACT_WHATSAPP_NUMBER=201096972225
 ```
 
-The email draft includes:
+The WhatsApp message includes:
 
 ```text
-Subject: Frontend Fix Sprint Request
+Frontend Fix Sprint Request
 
 Hi Ahmed,
 
@@ -132,7 +132,7 @@ I need help with:
 The full build CTA uses:
 
 ```text
-Subject: Final Boss Build Request
+Final Boss Build Request
 
 Hi Ahmed,
 
@@ -159,7 +159,7 @@ Budget range:
 
 ## What Ahmed Should Do Next
 
-1. Set `NEXT_PUBLIC_CONTACT_EMAIL`.
+1. Set `NEXT_PUBLIC_CONTACT_WHATSAPP_NUMBER`.
 2. Deploy to Vercel.
 3. Send 10 founder DMs and 10 agency/CTO DMs from `docs/outreach-messages.md`.
 4. Add each lead to `docs/lead-tracker-template.md`.
@@ -170,7 +170,7 @@ Budget range:
 
 ## Launch Now
 
-1. Set the email env:
+1. Set the WhatsApp env:
 
 ```bash
 cp .env.example .env.local
@@ -179,7 +179,7 @@ cp .env.example .env.local
 Then edit `.env.local`:
 
 ```text
-NEXT_PUBLIC_CONTACT_EMAIL=your-real-email@example.com
+NEXT_PUBLIC_CONTACT_WHATSAPP_NUMBER=201096972225
 ```
 
 2. Run locally:
@@ -193,9 +193,9 @@ npm run dev
 
 - Push the repo to GitHub.
 - Connect/import it in Vercel.
-- Add `NEXT_PUBLIC_CONTACT_EMAIL` in Vercel environment variables.
+- Add `NEXT_PUBLIC_CONTACT_WHATSAPP_NUMBER` in Vercel environment variables.
 - Deploy with the default Next.js settings.
-- Open the deployed site and test the CTA email draft.
+- Open the deployed site and test the WhatsApp CTA.
 
 4. Add the deployed URL to LinkedIn:
 

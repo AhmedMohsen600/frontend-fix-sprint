@@ -1,7 +1,7 @@
-const contactEmail =
-  process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "replace-with-your-email@example.com";
+const contactWhatsappNumber =
+  process.env.NEXT_PUBLIC_CONTACT_WHATSAPP_NUMBER ?? "201096972225";
 
-export const frontendIssueEmailBody = `Hi Ahmed,
+export const frontendIssueWhatsappMessage = `Hi Ahmed,
 
 I need help with:
 - Project type:
@@ -10,7 +10,7 @@ I need help with:
 - Deadline:
 - Budget:`;
 
-export const finalBossBuildEmailBody = `Hi Ahmed,
+export const finalBossBuildWhatsappMessage = `Hi Ahmed,
 
 I want to discuss a full frontend build.
 
@@ -24,14 +24,14 @@ Budget range:`;
 
 export function getContactHref(
   subject = "Frontend Fix Sprint Request",
-  body = frontendIssueEmailBody
+  message = frontendIssueWhatsappMessage
 ) {
-  const encodedSubject = encodeURIComponent(subject);
-  const encodedBody = encodeURIComponent(body);
+  const sanitizedNumber = contactWhatsappNumber.replace(/\D/g, "");
+  const encodedMessage = encodeURIComponent(`${subject}\n\n${message}`);
 
-  return `mailto:${contactEmail}?subject=${encodedSubject}&body=${encodedBody}`;
+  return `https://wa.me/${sanitizedNumber}?text=${encodedMessage}`;
 }
 
 export function getFinalBossBuildHref() {
-  return getContactHref("Final Boss Build Request", finalBossBuildEmailBody);
+  return getContactHref("Final Boss Build Request", finalBossBuildWhatsappMessage);
 }

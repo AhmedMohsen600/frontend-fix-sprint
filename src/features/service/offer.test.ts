@@ -63,20 +63,22 @@ describe("service offer model", () => {
     expect(score).toBeLessThan(60);
   });
 
-  it("builds a frontend issue request email with a useful client brief", () => {
+  it("builds a frontend issue WhatsApp request with a useful client brief", () => {
     const href = getContactHref();
 
-    expect(href).toContain("subject=Frontend%20Fix%20Sprint%20Request");
+    expect(href).toContain("https://wa.me/201096972225?text=");
+    expect(decodeURIComponent(href)).toContain("Frontend Fix Sprint Request");
     expect(decodeURIComponent(href)).toContain("Hi Ahmed,");
     expect(decodeURIComponent(href)).toContain("- Project type:");
     expect(decodeURIComponent(href)).toContain("- Tech stack:");
     expect(decodeURIComponent(href)).toContain("- Budget:");
   });
 
-  it("builds a full frontend build request email with project scope fields", () => {
+  it("builds a full frontend build WhatsApp request with project scope fields", () => {
     const href = getFinalBossBuildHref();
 
-    expect(href).toContain("subject=Final%20Boss%20Build%20Request");
+    expect(href).toContain("https://wa.me/201096972225?text=");
+    expect(decodeURIComponent(href)).toContain("Final Boss Build Request");
     expect(decodeURIComponent(href)).toContain("I want to discuss a full frontend build.");
     expect(decodeURIComponent(href)).toContain("Do you have Figma/designs?");
     expect(decodeURIComponent(href)).toContain("Budget range:");

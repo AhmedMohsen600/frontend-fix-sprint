@@ -2,7 +2,7 @@
 
 ## Day 1: Deploy + Profile Update
 
-- Set `NEXT_PUBLIC_CONTACT_EMAIL`.
+- Set `NEXT_PUBLIC_CONTACT_WHATSAPP_NUMBER`.
 - Deploy the site to Vercel.
 - Add the site URL to LinkedIn Featured.
 - Update LinkedIn headline/about with "React/Next.js Frontend Fix Sprint."

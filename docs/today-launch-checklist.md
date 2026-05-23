@@ -9,21 +9,21 @@ cp .env.example .env.local
 Set:
 
 ```text
-NEXT_PUBLIC_CONTACT_EMAIL=ahmedmohsen159357@gmail.com
+NEXT_PUBLIC_CONTACT_WHATSAPP_NUMBER=201096972225
 ```
 
 ## 2. Deploy
 
 - Push the repo to GitHub.
 - Connect the repo to Vercel.
-- Add `NEXT_PUBLIC_CONTACT_EMAIL` in Vercel environment variables.
+- Add `NEXT_PUBLIC_CONTACT_WHATSAPP_NUMBER` in Vercel environment variables.
 - Deploy.
 
 ## 3. Test CTA
 
 - Open the live site.
 - Click the main CTA.
-- Confirm it opens an email draft to Ahmed with the prefilled project fields.
+- Confirm it opens a WhatsApp chat to Ahmed with the prefilled project fields.
 
 ## 4. Add Link To LinkedIn
 

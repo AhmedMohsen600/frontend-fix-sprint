@@ -4,7 +4,7 @@
 
 - Name:
 - Company:
-- Email:
+- WhatsApp/contact:
 - Website/app URL:
 - Preferred communication channel:
 
