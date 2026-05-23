@@ -27,20 +27,33 @@ export function SiteHeader() {
   return (
     <header className="fixed top-0 z-40 w-full border-b border-white/10 bg-black/45 text-white backdrop-blur-2xl">
       <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link className="flex items-center gap-3" href="/" onClick={closeMenu}>
-          <span className="flex h-11 w-[68px] items-center justify-center rounded-[14px] border border-white/10 bg-white/[0.06] px-2.5 shadow-[0_0_34px_rgba(5,66,255,0.22)]">
+        <Link
+          className="group flex min-w-0 items-center gap-3 rounded-[18px] focus:outline-none focus:ring-2 focus:ring-sky focus:ring-offset-2 focus:ring-offset-black"
+          href="/"
+          onClick={closeMenu}
+        >
+          <span className="relative flex h-10 w-[62px] shrink-0 items-center justify-center overflow-hidden rounded-[16px] border border-white/10 bg-[radial-gradient(ellipse_80%_90%_at_25%_0%,rgba(5,66,255,0.32),transparent_62%),linear-gradient(135deg,rgba(255,255,255,0.11),rgba(255,255,255,0.035))] px-2.5 shadow-[0_18px_44px_rgba(5,10,30,0.32)] transition duration-300 group-hover:border-white/18 group-hover:bg-white/[0.08]">
+            <span
+              aria-hidden="true"
+              className="absolute inset-x-3 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.7),transparent)]"
+            />
             <Image
               alt=""
               aria-hidden="true"
-              className="h-7 w-auto object-contain"
+              className="h-[26px] w-auto object-contain drop-shadow-[0_0_16px_rgba(255,255,255,0.16)] transition duration-300 group-hover:scale-[1.04]"
               height={122}
               priority
               src="/brand/ahmed-mohsen-mark-white.png"
               width={192}
             />
           </span>
-          <span className="hidden text-sm font-semibold text-white sm:inline">
-            Ahmed Mohsen
+          <span className="hidden min-w-0 leading-none min-[460px]:grid">
+            <span className="text-[15px] font-semibold tracking-[-0.01em] text-white">
+              Ahmed Mohsen
+            </span>
+            <span className="mt-1 text-[9px] font-semibold uppercase tracking-[0.28em] text-white/42">
+              Senior Frontend
+            </span>
           </span>
         </Link>
 
